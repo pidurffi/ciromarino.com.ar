@@ -1,0 +1,15 @@
+	<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+		<div class="row">
+			{% set i = 0 %}
+			{% for img in galeria.galeria %}
+			{% set i = i+1 %}
+			<figure class="{% if i == 1 %}mobile-thumb{% endif %} col-sm-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				<a href="{{ asset('/uploads/galerias/gallery/') }}{{ img }}" itemprop="contentUrl" data-size="800x536">
+					<img src="{{ asset('/uploads/galerias/') }}{{ img|gallery_thumb(350,235) }}" itemprop="thumbnail" alt="Image description" />
+					<span class="mobile-label">Ver galeria</span>
+				</a>
+			</figure>
+			{% endfor %}
+		</div>
+	</div>
+

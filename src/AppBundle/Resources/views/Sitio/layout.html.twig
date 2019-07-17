@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cabañas Ciromarino, Las Gaviotas Mar de las Pampas</title>
+	<meta name="keywords" content="cabañas, apart, las gaviotas, mar de las pampas, alquiler, playa, Mar de las Pampas" />
+        <meta name="description" content="En las Gaviotas, a 20 metros de la playa. Cómodas cabañas equipadas con piscina climatizada. Desayuno y servicios de mucama, ropa blanca y WI-FI" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+        
+	<!-- CSS -->
+	<link href="{{ asset('bundles/app/stylesheets/screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('bundles/app/stylesheets/fonts.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('bundles/app/stylesheets/owl.carousel.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('bundles/app/stylesheets/owl.transitions.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('bundles/app/stylesheets/owl.theme.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('bundles/app/stylesheets/photoswipe.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('bundles/app/stylesheets/default-skin.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+	<!-- JS -->
+	<script type="text/javascript" src="{{ asset('bundles/app/js/jquery-2.2.3.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/app/js/functions.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/app/js/gallery.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/app/js/owl.carousel.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/app/js/photoswipe.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/app/js/photoswipe-ui.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/app/js/scroll.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/app/js/contacto.js') }}"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIUOmxyy9vXKQYm3cEORL-CApfsJAdJwc"></script>
+	<script>
+  function initialize() {
+	var isDraggable = $(document).width() > 480 ? true : false;  
+	var ispanControl = $(document).width() > 480 ? true : false;
+	var myLatLng = {lat: -37.337174, lng: -57.025846};
+	var marker = new google.maps.Marker({
+	   animation: google.maps.Animation.BOUNCE,
+	   position: myLatLng,
+	   title:"Ciromarino"
+	});
+	var mapCanvas = document.getElementById('map');
+	var mapOptions = {
+	  center: new google.maps.LatLng(-37.337174, -57.025846),
+	  zoom: 17,
+	  mapTypeControl: true,
+	  panControl:ispanControl,
+	  draggable: isDraggable,
+	  scaleControl: true,
+	  streetViewControl: true,
+	  rotateControl: true,
+	  scrollwheel: false,
+	  mapTypeId: google.maps.MapTypeId.SATELLITE
+	}
+	var map = new google.maps.Map(mapCanvas, mapOptions);
+	marker.setMap(map);
+  }
+  
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<body>
+	
+	{% block content %}
+	{% endblock %}
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="logo"></div>
+					<p>Calle 30 y Mar Azul <br>Las Gaviotas<br>
+					Teléfono: (011) 5646-2464<br>
+					WhatsApp: +54 9 11 5646-2464<br>
+					reservas@ciromarino.com.ar</p>
+				</div>
+				<div class="col-sm-8">
+					<ul>
+						<li><a data-scroll href="#home">Inicio</a></li>
+						<li><a data-scroll href="#cabanas">Las Cabañas</a></li>
+						<li><a data-scroll href="#gallery">Fotos</a></li>
+						<li><a data-scroll href="#services">Servicios</a></li>
+						<li><a data-scroll href="#ubicacion">Ubicación</a></li>
+						<li><a data-scroll href="#contact">Contacto</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- lightbox layout -->
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="pswp__bg"></div>
+		<div class="pswp__scroll-wrap">
+			<div class="pswp__container">
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+			</div>
+			<div class="pswp__ui pswp__ui--hidden">
+				<div class="pswp__top-bar">
+					<div class="pswp__counter"></div>
+					<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+					<button class="pswp__button pswp__button--share" title="Share"></button>
+					<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+					<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+					<div class="pswp__preloader">
+						<div class="pswp__preloader__icn">
+							<div class="pswp__preloader__cut">
+								<div class="pswp__preloader__donut"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+					<div class="pswp__share-tooltip"></div>
+				</div>
+				<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+				<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+				<div class="pswp__caption">
+					<div class="pswp__caption__center"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

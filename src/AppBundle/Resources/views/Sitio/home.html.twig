@@ -1,0 +1,206 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+
+{% block content %}
+	<section class="intro" id="home">
+		<header>
+			<div class="container">
+				<button class="hamburger hamburger--spin" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+				<div class="logo"></div>
+				<div class="contact-info">
+					<p>Teléfono: (011) 5646-2464&nbsp;&nbsp;|&nbsp;&nbsp;WhatsApp: +54 9 11 5646-2464<br>
+					   <a href="mailto:reservas@ciromarino.com.ar?Subject=Consulta%20Caba&ntilde;as%20Ciromarino" target="_top">reservas@ciromarino.com.ar</a>
+					</p>
+				</div>
+				<nav>
+					<ul>
+						<li><a data-scroll href="#home">Inicio</a></li>
+						<li><a data-scroll href="#cabanas">Las Cabañas</a></li>
+						<li><a data-scroll href="#gallery">Fotos</a></li>
+						<li><a data-scroll href="#services">Servicios</a></li>
+						<li><a data-scroll href="#ubicacion">Ubicación</a></li>
+						<li><a data-scroll href="#contact">Contacto</a></li>
+					</ul>
+				</nav>
+				<ul class="social-nav">
+					<li><a><span class="icon-fb"></span></a></li>
+					<li><a><span class="icon-tw"></span></a></li>
+					<li><a><span class="icon-gp"></span></a></li>
+				</ul>
+			</div>
+		</header>
+		<div class="owl-main-slider">
+			<div class="item one"></div>
+			<div class="item two"></div>
+		</div>
+		<a data-scroll href="#banners">
+			<span class="icon-arrow-down"></span>
+		</a>
+	</section>
+
+	<section class="banners" id="banners">
+		<div class="container">
+			
+            {{ render(controller('AppBundle:Default:promociones')) }}
+			
+			<div class="welcome">
+				<h2>Cabañas Ciromarino - Las Gaviotas - Mar de las pampas</h2>
+				<p>Cabañas Ciromarino es un complejo de cabañas situado en <strong>Las Gaviotas</strong>, a metros del mar y cerca de los tres centros comerciales de <strong>Mar de las Pampas</strong>, <strong>Las Gaviota</strong>s y <strong>Mar Azul</strong>.<br>
+				Las cabañas se encuentran sobre un solar de 3350 m2 ubicado a metros de la salida al mar de fácil acceso, con un amplio espacio verde entre las cabañas.<br>
+                                La piscina climatizada por sistema solar y solarium ubicada en el centro del complejo recibe el sol durante todo el día.<br>
+				El complejo está compuesto por 14 cabañas de 75 m2. Las cabañas están totalmente equipadas hasta para 7 personas.<br>
+				<br>
+				Las cabañas rodean el solarium y piscina climatizada y descubierta todo el año.<br>
+				<strong>Las Gaviotas</strong>, Un lugar de encanto con la perfecta combinación del mar y el bosque.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="cabanas" id="cabanas">
+		<div class="container">
+			<h2>Las Cabañas</h2>
+			<div class="wrapper">
+				<div class="controls">
+					<span class="icon-arrow-left"></span>
+					<span class="icon-arrow-right"></span>
+				</div>
+				<div class="owl-cabanas">
+					<div class="item">
+						<img src="{{ asset('bundles/app/images/cabanas/001.jpg') }}" alt="Cabañas Ciromarino, Las Gaviotas - Mar de las Pampas">
+					</div>
+					<div class="item">
+						<img src="{{ asset('bundles/app/images/cabanas/001.jpg') }}" alt="Cabañas Ciromarino, Las Gaviotas - Mar de las Pampas">
+					</div>
+					<div class="item">
+						<img src="{{ asset('bundles/app/images/cabanas/001.jpg') }}" alt="Cabañas Ciromarino, Las Gaviotas - Mar de las Pampas">
+					</div>
+				</div>
+			</div>
+			<ul>
+				<li><span>&check;</span>Cabañas con capacidad hasta 7 personas</li>
+				<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
+				<li><span>&check;</span>Aire acondicionado frío/calor en habitación matrimonial</li>
+				<li><span>&check;</span>Calefacción, ventiladores de techo</li>
+				<li><span>&check;</span>Piscina descubierta climatizada por sistema solar (con sector para niños) y reposeras</li>
+				<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
+				<li><span>&check;</span>Vidrios tonalizados</li>
+				<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocasiones de recibir visitas</li>
+				<li><span>&check;</span>T.V. por DirecTV</li>
+				<!-- <li><span>&check;</span>Reproductor de DVD</li> -->
+				<li><span>&check;</span>Juegos de plaza para chicos</li>
+				<li><span>&check;</span>Parrillas individuales</li>
+				<li><span>&check;</span>Caja de seguridad</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="gallery" id="gallery">
+		<div class="container">
+			<h2>Galería de fotos</h2>
+			{{ render(controller('AppBundle:Default:galeria')) }}
+		</div>
+	</section>
+	
+	<section class="videos" id="videos">
+		<div class="container">
+			<h2>Videos</h2>
+			<div class="row">
+			    <div class="col-md-6">
+			        <iframe width="1280" height="720" src="https://www.youtube.com/embed/YGZeNiml1-U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			    </div>
+			</div>
+		</div>
+	</section>
+
+	<section class="services" id="services">
+		<div class="container">
+			<h2>Nuestros Servicios</h2>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-desayuno"></span>Desayuno artesanal en la cabaña: medialunas y pancitos, leche y jugo de naranja, manteca,mermelada, queso untable, azúcar en sobre, café, te y mate cocido en sobres, cacao en polvo para menores.</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-limpieza"></span>Servicio de mucama diario en temporada (no incluye lavado de vajilla)</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-cama"></span>Ropa blanca: sábanas, toallas y toallones de baño. (No incluye toallones para la piscina ni playa)</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-wifi"></span>WI-FI en todo el establecimiento</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-sombrilla"></span>Una sombrilla y dos reposeras para llevar a la playa</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-masaje"></span>Masajes (opcional)</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-alarma"></span>Caja de seguridad</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-cuna"></span>Practicuna, sillita para comer y bañera para bebés</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="map" id="ubicacion">
+		<div class="container">
+			<h2>Ubicación</h2>
+		</div>
+		<div id="map"></div>
+	</section>
+
+	<section class="contact" id="contact">
+		<div class="container">
+			<h2>Contacto</h2>
+			<form  id="form_contacto" method="post" onsubmit="return validar_form();">
+				<div class="row">
+					<div class="col-sm-6">
+						<input type="text" placeholder="Nombre" required="required" id="form_nombre">
+						<input type="email" placeholder="EMail" required="required" id="form_email">
+						{#<input type="text" placeholder="Teléfono" required="required" id="form_telefono">#}
+					</div>
+					<div class="col-sm-6">
+						<textarea placeholder="Mensaje" id="form_mensaje"></textarea>
+					</div>
+					<div class="col-sm-12">
+						<a class="send">Enviar</a>
+						<div class="spinner" id="form_img_loading">
+						<div class="rect1"></div>
+						<div class="rect2"></div>
+						<div class="rect3"></div>
+						<div class="rect4"></div>
+						<div class="rect5"></div>
+					</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+{% endblock %}
