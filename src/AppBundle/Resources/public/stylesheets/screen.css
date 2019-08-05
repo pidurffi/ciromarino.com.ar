@@ -1985,7 +1985,7 @@ h6 {
 
 /* line 285, ../sass/screen.scss */
 p {
-  margin: 0;
+  margin-top: 10px;
   padding: 0;
   border: 0;
   font: inherit;
@@ -3853,7 +3853,7 @@ section.intro {
 .intro .owl-main-slider .item {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   height: 60vh;
 }
 /* line 1747, ../sass/screen.scss */

@@ -283,7 +283,7 @@ h6 {
 	vertical-align: baseline;
 }
 p {
-	margin: 0;
+	margin-top: 10px;
 	padding: 0;
 	border: 0;
 	font: inherit;
@@ -1741,7 +1741,7 @@ section.intro {
 		.item {
 			background-repeat: no-repeat;
 			background-size: cover;
-			background-position: center center;
+			background-position: top center;
 			height: 60vh;
 		}
 		.item.one {
