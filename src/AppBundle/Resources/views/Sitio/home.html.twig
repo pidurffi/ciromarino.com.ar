@@ -7,34 +7,39 @@
 				
 				
 				<div class="logo"></div>
-				<a href="https://wa.me/5491156462464" class="whatsapp"></a>
+				
+				
+				<div class="nav-wrapper">
+				    <span class="ws-phone">
+				        <a target="_blank" href="https://wa.me/5491156462464"><i class="fab fa-whatsapp"></i> (011) 5646.2464</a>
+				    </span>
+				    <span class="ws-phone --green">
+				        <a target="_blank" href="https://wa.me/5491156462464"><i class="fab fa-whatsapp"></i> Chatea por Whatsapp</a>
+				    </span>
+				    <nav>
+    					<ul>
+    						<li><a data-scroll href="#home">Inicio</a></li>
+    						<li><a data-scroll href="#cabanas">Las Cabañas</a></li>
+    						<li><a data-scroll href="#gallery">Fotos</a></li>
+    						<li><a data-scroll href="#services">Servicios</a></li>
+    						<li><a data-scroll href="#ubicacion">Ubicación</a></li>
+    						<li><a data-scroll href="#contact">Contacto</a></li>
+    					</ul>
+    				</nav>
+				</div>
 				<button class="hamburger hamburger--spin" type="button">
 					<span class="hamburger-box">
 						<span class="hamburger-inner"></span>
 					</span>
 				</button>
-				
-				<nav>
-					<ul>
-						<li><a data-scroll href="#home">Inicio</a></li>
-						<li><a data-scroll href="#cabanas">Las Cabañas</a></li>
-						<li><a data-scroll href="#gallery">Fotos</a></li>
-						<li><a data-scroll href="#services">Servicios</a></li>
-						<li><a data-scroll href="#ubicacion">Ubicación</a></li>
-						<li><a data-scroll href="#contact">Contacto</a></li>
-					</ul>
-				</nav>
 				<div class="contact-wrapper">
-    				<div class="contact-info">
-    					<p>Teléfono: (011) 5646-2464&nbsp;&nbsp;|&nbsp;&nbsp;WhatsApp: +54 9 11 5646-2464<br>
-    					   <a href="mailto:reservas@ciromarino.com.ar?Subject=Consulta%20Caba&ntilde;as%20Ciromarino" target="_top">reservas@ciromarino.com.ar</a>
-    					</p>
-    				</div>
     				<ul class="social-nav">
-    					<li><a><span class="icon-fb"></span></a></li>
-    					<li><a><span class="icon-tw"></span></a></li>
-    					<li><a><span class="icon-gp"></span></a></li>
-    				</ul>    
+    					<li><a><i class="fab fa-facebook-f"></i></a></li>
+    					<li><a><i class="fab fa-twitter"></i></a></li>
+    				</ul>
+    				<div class="contact-info">
+    					<a href="mailto:reservas@ciromarino.com.ar?Subject=Consulta%20Caba&ntilde;as%20Ciromarino" target="_top">reservas@ciromarino.com.ar</a>
+    				</div>
 				</div>
 			</div>
 		</header>
@@ -51,7 +56,10 @@
 		<div class="container">
 			<h2>Promociones</h2>
             {{ render(controller('AppBundle:Default:promociones')) }}
-			
+    </section>        
+    
+            
+	<section class="banners" id="banners">		
 			<div class="welcome">
 				<h2>Cabañas Ciromarino - Las Gaviotas - Mar de las pampas</h2>
 				<p>Cabañas Ciromarino es un complejo de cabañas situado en <strong>Las Gaviotas</strong>, a metros del mar y cerca de los tres centros comerciales de <strong>Mar de las Pampas</strong>, <strong>Las Gaviota</strong>s y <strong>Mar Azul</strong>.<br>
@@ -64,6 +72,12 @@
 			</div>
 		</div>
 	</section>
+	
+	<section id="call-to-action">
+        <h3>WhatsApp directo !!!</h3>
+        <p>Hacé click acá y envianos tu consulta por WhatsApp, te responderemos inmediatamente</p>
+        <a href="https://wa.me/5491156462464" target="_blank"><i class="fab fa-whatsapp fa-10x" aria-hidden="true"></i></a>
+    </section>
 
 	<section class="cabanas" id="cabanas">
 		<div class="container">
